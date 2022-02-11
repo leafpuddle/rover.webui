@@ -1,3 +1,9 @@
+/* Variables and Font Provisioning */
+@font-face {
+    font-family: "Quicksand";
+    src: url("~/fonts/quicksand.ttf") format("ttf")
+  }
+
 /* CSS Reset */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -49,21 +55,54 @@ html, body {
 }
 
 body {
+    background-color: black;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: min-content auto min-content;
 }
 
 header {
-    background-color: lightpink;
+    
+    padding: 5px;
+    display: grid;
+    grid-template-columns: min-content auto;
+    grid-template-rows: auto;
+    align-items: center;
 }
 
 main {
-    background-color: lightblue;
+    padding: 10px;
 }
 
 footer {
-    background-color: lightgreen;
+    padding: 5px;
+    font-size: 15px;
+    text-align: center;
 }
 
 /* Typography */
+*, header, main, footer {
+    font-family: 'Quicksand';
+    color: white;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+#branding {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding: 0px 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
