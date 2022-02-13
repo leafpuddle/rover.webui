@@ -109,16 +109,22 @@ header nav ul {
 
 /* Display Elements */
 .bauble {
-    margin: 10px 0px;
     padding: 15px;
     border-radius: 15px;
-    border: 5px solid;
+    border: 2px solid;
 }
 
 .bauble-title {
     margin-bottom: 15px;
     font-size: 30px;
     font-weight: 500;
+}
+
+.card-list {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(auto-fill, min-content);
+    gap: 25px;
 }
 
 .list {
@@ -148,7 +154,24 @@ header nav ul {
     border-color: #21baf2;
 }
 
+.white {
+    border-color: #ffffff;
+}
+
 .card {
     height: 300px;
     width: auto;
+}
+
+.center-expand {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-content: center;
+}
+.center {
+    width: 50%;
 }
