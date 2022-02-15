@@ -37,6 +37,8 @@ public static class QueryModelCards
             query += string.Join(search ? " OR " : " AND ", arguments.ToArray());
         }
 
+        query += " ORDER BY tcg_cards.id ASC";
+
         await using var cmdGetCards = new NpgsqlCommand(query, conn)
         {
             Parameters =
