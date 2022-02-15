@@ -17,6 +17,6 @@ node {
     stage ('Deploy') {
         sh 'scp -r bin/Debug/net6.0/* rover@web01.leafpuddle.net:/var/www/rover-webui/dist/'
 
-        sh 'ssh rover@garmr.faultybranches.net sudo systemctl restart rover-webui.service'
+        sh 'ssh rover@web01.leafpuddle.net sudo systemctl restart rover-webui.service'
     }
 }
