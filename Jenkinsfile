@@ -1,4 +1,4 @@
-node {
+node (label:'ubuntu-20.04') {
     stage ('Prepare environment') {
         git branch: 'master', credentialsId: '0c9158e7-0eca-4c36-b49d-728fec708a2a', url: 'git.leafpuddle.dev:misc/rover.webui.git'
         sh 'dotnet restore'
