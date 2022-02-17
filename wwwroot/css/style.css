@@ -175,3 +175,38 @@ header nav ul {
 .center {
     width: 50%;
 }
+
+/* Card Page */
+.card-page {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 512px 512px;
+    grid-template-rows: min-content;
+    gap: 15px;
+}
+
+.card-page-info {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: min-content auto min-content min-content min-content;
+    gap: 15px;
+}
+
+.card-page-title {
+    height: min-content;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.card-page-desc {
+    height: 100%;
+    font-size: 30px;
+}
+
+.card-page-rarity,
+.card-page-series,
+.card-page-value {
+    height: min-content;
+    font-size: 25px;
+    align-self: flex-end;
+}

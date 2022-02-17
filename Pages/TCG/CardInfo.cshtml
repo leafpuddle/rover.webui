@@ -1,0 +1,29 @@
+@page "/tcg/cards/c/{id}"
+@model CardInfoModel
+@{
+    ViewData["Title"] = "List of Cards";
+}
+
+@if(Model.card.Length > 0)
+{
+    <div class="center-expand">
+        <div class="card-page center">
+            <img src="https://rover.us-east-1.linodeobjects.com/@(Model.card[0].id).png">
+            <div class="card-page-info">
+                <div class="card-page-title">@Model.card[0].name</div>
+                <div class="card-page-desc">@Model.card[0].description</div>
+                <div class="card-page-rarity">Rarity: @Model.card[0].rarity</div>
+                <div class="card-page-series">Series: @Model.card[0].series</div>
+                <div class="card-page-value">Value: @Model.card[0].value</div>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <div class="center-expand">
+        <div class="bauble white center">
+            A card by this ID could not be found.
+        </div>
+    </div>
+}
