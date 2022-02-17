@@ -8,66 +8,60 @@
     <div class="bauble green">
         <div class="bauble-title">Common Cards</div>
         <div class="list">
-            <img class="card display" src="~/devimages/common.png">
-            <img class="card display" src="~/devimages/common.png">
-            <img class="card display" src="~/devimages/common.png">
-            <img class="card display" src="~/devimages/common.png">
-            <img class="card display" src="~/devimages/common.png">
-            <img class="card display" src="~/devimages/common.png">
-            <img class="card display" src="~/devimages/common.png">
-            <img class="card display" src="~/devimages/common.png">
-            <img class="card display" src="~/devimages/common.png">
-            <img class="card display" src="~/devimages/common.png">
-            <img class="card display" src="~/devimages/common.png">
-            <img class="card display" src="~/devimages/common.png">
+            @foreach (ModelCard card in Model.commonCards)
+            {
+                <a href="~/tcg/cards/c/@card.id">
+                    <img class="card display" src="https://rover.us-east-1.linodeobjects.com/@(card.id).png" >
+                </a>
+            }
         </div>
     </div>
 
     <div class="bauble purple">
         <div class="bauble-title">Uncommon Cards</div>
         <div class="list">
-            <img class="card display" src="~/devimages/uncommon.png">
-            <img class="card display" src="~/devimages/uncommon.png">
-            <img class="card display" src="~/devimages/uncommon.png">
-            <img class="card display" src="~/devimages/uncommon.png">
-            <img class="card display" src="~/devimages/uncommon.png">
-            <img class="card display" src="~/devimages/uncommon.png">
-            <img class="card display" src="~/devimages/uncommon.png">
-            <img class="card display" src="~/devimages/uncommon.png">
-            <img class="card display" src="~/devimages/uncommon.png">
-            <img class="card display" src="~/devimages/uncommon.png">
-            <img class="card display" src="~/devimages/uncommon.png">
+            @foreach (ModelCard card in Model.uncommonCards)
+            {
+                <a href="~/tcg/cards/c/@card.id">
+                    <img class="card display" src="https://rover.us-east-1.linodeobjects.com/@(card.id).png" >
+                </a>
+            }
         </div>
     </div>
 
     <div class="bauble yellow">
         <div class="bauble-title">Rare Cards</div>
         <div class="list">
-            <img class="card display" src="~/devimages/rare.png">
-            <img class="card display" src="~/devimages/rare.png">
-            <img class="card display" src="~/devimages/rare.png">
-            <img class="card display" src="~/devimages/rare.png">
-            <img class="card display" src="~/devimages/rare.png">
-            <img class="card display" src="~/devimages/rare.png">
-            <img class="card display" src="~/devimages/rare.png">
+            @foreach (ModelCard card in Model.rareCards)
+            {
+                <a href="~/tcg/cards/c/@card.id">
+                    <img class="card display" src="https://rover.us-east-1.linodeobjects.com/@(card.id).png" >
+                </a>
+            }
         </div>
     </div>
 
     <div class="bauble red">
         <div class="bauble-title">Legendary Cards</div>
         <div class="list">
-            <img class="card display" src="~/devimages/legendary.png">
-            <img class="card display" src="~/devimages/legendary.png">
-            <img class="card display" src="~/devimages/legendary.png">
-            <img class="card display" src="~/devimages/legendary.png">
+            @foreach (ModelCard card in Model.legendaryCards)
+            {
+                <a href="~/tcg/cards/c/@card.id">
+                    <img class="card display" src="https://rover.us-east-1.linodeobjects.com/@(card.id).png" >
+                </a>
+            }
         </div>
     </div>
 
     <div class="bauble blue">
         <div class="bauble-title">Mythic Cards</div>
         <div class="list">
-            <img class="card display" src="~/devimages/mythic.png">
-            <img class="card display" src="~/devimages/mythic.png">
+            @foreach (ModelCard card in Model.mythicCards)
+            {
+                <a href="~/tcg/cards/c/@card.id">
+                    <img class="card display" src="https://rover.us-east-1.linodeobjects.com/@(card.id).png" >
+                </a>
+            }
         </div>
     </div>
 </div>
